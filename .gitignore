@@ -6,5 +6,6 @@
 .DS_Store
 Thumbs.db
 
-# package
+# IDE
+/.idea
 package-lock.json

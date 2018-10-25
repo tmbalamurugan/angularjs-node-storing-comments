@@ -1,0 +1,28 @@
+<section class="box-500 mar-auto">
+    <form name="reply" class="form-box" novalidate>
+        <textarea rows="4" cols="40" name="reply" ng-model="RC.reply" required>
+        </textarea>
+        <button type="submit" ng-click="RC.replycomment(reply.$valid, RC.reply)">Submit</button>
+    </form>
+</section>
+<div class="flex flex-wrap box-500 mar-20-auto">
+    <section class="comments">
+        <div class="each-comments flex-100" ng-repeat=" (key, replies) in RC.replies">
+            <div class="flex">
+                <div class="round"><p class="small-name">{{ replies.char }}</p></div>
+                <div class="flex flex-wrap">
+                    <h4>{{ replies.user }}</h4>
+                    <p class="flex-100">{{ replies.text }}</p>
+                </div>
+            </div>
+            <div class="flex flex-between flex-100">
+                <p>Posted {{ replies.date | timeago }}</p>
+                <div class="flex like-comment flex-between">
+                    <!--<p><img src="/app/site/public/images/chat.svg"><a ui-sref="app.reply({id:comments._id})">Comments</a></p>-->
+                    <p ng-click="RC.like_reply(replies, key)"><img src="/app/site/public/images/like.svg">{{
+                        RC.replies[key].like }} Likes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

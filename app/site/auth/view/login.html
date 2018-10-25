@@ -1,0 +1,36 @@
+<div class="container">
+    <form name="loginForm" ng-submit="AC.login(loginForm.$valid, AC.user)" novalidate class="login-form">
+        <div class="row">
+            <div class="col-25">
+                <label for="name">Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="name" name="name" ng-model="AC.user.name" placeholder="Enter your name" required>
+                <!--<p ng-show="loginForm.name.$error.minlength" class="help-block">Username is too short.</p>-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="password">Password</label>
+            </div>
+            <div class="col-75">
+                <input type="password" id="password" name="password" ng-model="AC.user.password"
+                       placeholder="Enter your password" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+            </div>
+            <div class="col-75">
+                <button type="submit">Login</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+            </div>
+            <div class="col-75">
+                <p> Create Account ? <a ui-sref="app.signup " ui-sref-active="active">sign up</a></p>
+            </div>
+        </div>
+    </form>
+</div>

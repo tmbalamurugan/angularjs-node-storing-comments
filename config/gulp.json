@@ -1,0 +1,45 @@
+{
+  "app": {
+    "site": {
+      "vendor": {
+        "js": {
+          "src": [
+            "./app/site/public/scripts/jquery.js",
+            "./app/site/public/scripts/angular.js",
+            "./app/site/public/scripts/jquery-ui.js",
+            "./app/site/public/scripts/bootstrap.js",
+            "./app/site/public/scripts/angular-cookies.js",
+            "./app/site/public/scripts/angular-ui-router.js",
+            "./app/site/public/scripts/angular-ui-tree.js",
+            "./app/site/public/scripts/moment.js",
+            "./app/site/public/scripts/ui-bootstrap-tpls.js",
+            "./app/site/public/scripts/angular-toastr.tpls.js",
+            "./app/site/public/scripts/ngtimeago.js",
+            "./app/site/public/scripts/ng-infinite-scroll.js"
+          ],
+          "dest": "./app/site/dist/js"
+        },
+        "css": {
+          "src": [
+            "./app/site/public/css/bootstrap.css",
+            "./app/site/public/css/angular-toastr.css",
+            "./app/site/public/css/style.css"
+          ],
+          "dest": "./app/site/dist/css"
+        }
+      },
+      "modules": {
+        "js": {
+          "src": [
+            "./app/site/app.js",
+            "./app/site/auth/controller/auth.js",
+            "./app/site/auth/model/auth.service.js",
+            "./app/site/comments/controller/comments.js",
+            "./app/site/common/appservice.js"
+          ],
+          "dest": "./app/site/dist/js"
+        }
+      }
+    }
+  }
+}

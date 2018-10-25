@@ -1,0 +1,9 @@
+{
+  "port": "8000",
+  "env": "development",
+  "mongodb": {
+    "host": "localhost",
+    "port": "27017",
+    "database": "comments"
+  }
+}

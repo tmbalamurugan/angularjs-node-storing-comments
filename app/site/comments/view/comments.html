@@ -1,0 +1,30 @@
+<section class="box-500 mar-auto">
+    <form name="comment" class="form-box" novalidate>
+        <textarea rows="4" cols="40" name="comment" ng-model="CC.user.comment" required>
+        </textarea>
+        <button type="submit" ng-click="CC.comment(comment.$valid, CC.user)">Submit</button>
+    </form>
+</section>
+<div class="flex flex-wrap box-500 mar-20-auto">
+    <section class="comments">
+        <div class="each-comments flex-100" ng-repeat=" (key, comments) in CC.comments">
+            <div class="flex">
+                <div class="round"><p class="small-name">{{ comments.char}}</p></div>
+                <div class="flex flex-wrap">
+                    <h4>{{ comments.user }} </h4>
+                    <p class="flex-100">{{ comments.text }}</p>
+                </div>
+            </div>
+            <div class="flex flex-between flex-100">
+                <p>Posted {{ comments.date | timeago }}</p>
+                <div class="flex like-comment flex-between">
+                    <p><img src="/app/site/public/images/chat.svg">{{ comments.reply_count}}<a class="reply_count"
+                                                                                               ui-sref="app.reply({id:comments._id})">
+                        Comments</a></p>
+                    <p ng-click="CC.like(comments, key)"><img src="/app/site/public/images/like.svg"> {{
+                        CC.comments[key].like }} </p>Likes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

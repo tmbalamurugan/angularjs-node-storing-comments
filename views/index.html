@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="comments.site" ng-controller="MainCtrl" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <title>site</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/app/site/public/css/bootstrap.css">
+    <link rel="stylesheet" href="/app/site/public/css/angular-toastr.css">
+    <link rel="stylesheet" href="/app/site/public/css/style.css">
+    <!-- endinject -->
+</head>
+<body>
+
+<!-- inject:js -->
+<script src="/app/site/public/scripts/jquery.js"></script>
+<script src="/app/site/public/scripts/angular.js"></script>
+<script src="/app/site/public/scripts/jquery-ui.js"></script>
+<script src="/app/site/public/scripts/bootstrap.js"></script>
+<script src="/app/site/public/scripts/angular-cookies.js"></script>
+<script src="/app/site/public/scripts/angular-ui-router.js"></script>
+<script src="/app/site/public/scripts/angular-ui-tree.js"></script>
+<script src="/app/site/public/scripts/moment.js"></script>
+<script src="/app/site/public/scripts/ui-bootstrap-tpls.js"></script>
+<script src="/app/site/public/scripts/angular-toastr.tpls.js"></script>
+<script src="/app/site/public/scripts/ngtimeago.js"></script>
+<script src="/app/site/public/scripts/ng-infinite-scroll.js"></script>
+<script src="/app/site/app.js"></script>
+<script src="/app/site/auth/controller/auth.js"></script>
+<script src="/app/site/auth/model/auth.service.js"></script>
+<script src="/app/site/comments/controller/comments.js"></script>
+<script src="/app/site/common/appservice.js"></script>
+<!-- endinject -->
+<div id="wrap" ui-view autoscroll="false"></div>
+
+</body>
+</html>
